@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definitions xmlns:bons0="http://www.technisys.net/cmm/services/verifyTokenValuePersonalBanking/v0.0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.w3.org/2003/05/soap-envelope" xmlns:bons2="http://www.technisys.net/cmm/services/verifyTokenValuePersonalBanking/rq/v0.0" xmlns:bons3="http://www.technisys.net/cmm/services/verifyTokenValuePersonalBanking/rs/v0.0" xmlns:bons1="http://www.technisys.net/cmm/services/metadata/v2.0" xmlns:e="http://www.technisys.net/cmm/services/errors/v1.0" targetNamespace="http://www.technisys.net/cmm/services/verifyTokenValuePersonalBanking/v0.0">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.technisys.net/cmm/services/verifyTokenValuePersonalBanking/rq/v0.0" id="verifyTokenValuePersonalBankingRequest">
+      <xsd:complexType name="generic">
+        <xsd:all>
+          <xsd:element name="seed" minOccurs="0">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                  <xsd:attribute name="type" type="xsd:string" use="required"/>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="customer">
+        <xsd:all>
+          <xsd:element name="identificationType" type="bons2:identificationType" minOccurs="0"/>
+          <xsd:element name="identificationNumber" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+        <xsd:attribute name="name" use="required" type="xsd:string"/>
+      </xsd:complexType>
+      <xsd:complexType name="identificationType">
+        <xsd:all>
+          <xsd:element name="mnemonic" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="token">
+        <xsd:all>
+          <xsd:element name="tokenType" type="bons2:tokenType" minOccurs="0"/>
+          <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+        <xsd:attribute name="name" use="required" type="xsd:string"/>
+      </xsd:complexType>
+      <xsd:complexType name="tokenType">
+        <xsd:all>
+          <xsd:element name="mnemonic" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="internalValues" type="xsd:string" minOccurs="0"/>
+        </xsd:all>
+      	<xsd:attribute name="name" use="required" type="xsd:string"/>
+      </xsd:complexType>
+      <xsd:element name="verifyTokenValuePersonalBankingRequest" type="bons2:verifyTokenValuePersonalBankingRequest" nillable="true"/>
+      <xsd:complexType name="verifyTokenValuePersonalBankingRequest">
+        <xsd:sequence>
+          <xsd:element name="generic" type="bons2:generic" minOccurs="0"/>
+          <xsd:element name="customer" type="bons2:customer"/>
+          <xsd:element name="token" type="bons2:token"/>
+          <xsd:element name="tokenType" type="bons2:tokenType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.technisys.net/cmm/services/verifyTokenValuePersonalBanking/rs/v0.0" id="verifyTokenValuePersonalBankingResponse">
+      <xsd:complexType name="generic">
+        <xsd:all>
+          <xsd:element name="result" minOccurs="0">
+            <xsd:complexType>
+              <xsd:simpleContent>
+                <xsd:extension base="xsd:boolean">
+                  <xsd:attribute name="type" type="xsd:string" use="required"/>
+                </xsd:extension>
+              </xsd:simpleContent>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:element name="verifyTokenValuePersonalBankingResponse" type="bons3:verifyTokenValuePersonalBankingResponse" nillable="true"/>
+      <xsd:complexType name="verifyTokenValuePersonalBankingResponse">
+        <xsd:sequence>
+          <xsd:element name="generic" type="bons3:generic" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.technisys.net/cmm/services/metadata/v2.0" id="metadata">
+      <xsd:complexType name="abstractEnumComplexType"> 
+        <xsd:annotation> 
+          <xsd:documentation>Entidad del tipo Enumerado</xsd:documentation> 
+        </xsd:annotation>  
+        <xsd:all> 
+          <xsd:element name="mnemonic" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"/>  
+          <xsd:element name="longDesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="shortDesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="originalCodes" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="internalValues" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/> 
+        </xsd:all> 
+      </xsd:complexType>
+      <xsd:complexType name="metadata"> 
+        <xsd:all> 
+          <xsd:element name="serviceId" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"> 
+            <xsd:annotation> 
+              <xsd:documentation>Id del servicio a ejecutar</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="serviceVersion" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"> 
+            <xsd:annotation> 
+              <xsd:documentation>Version del servicio a ejecutar</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="sessionId" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"> 
+            <xsd:annotation> 
+              <xsd:documentation>Id unico para identificar las operaciones que hizo un usuario desde un login hasta un logout</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="institutionType" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Segmento</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="organizationType" type="bons1:abstractEnumComplexType" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Segmento</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="channelId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Canal del cual proviene el mensaje</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="targetChannel" type="bons1:abstractEnumComplexType" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Canal destino de la ejecucion del servicio. Usado en caso de CC/IVR cuando se opera en nombre de</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="executingChannel" type="bons1:abstractEnumComplexType" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Canal solicitante de la ejecución del servicio</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="userId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Id del usuario que invoca el servicio</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="traceNumber" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"> 
+            <xsd:annotation> 
+              <xsd:documentation>Identificacion univoca del mensaje</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="address" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"> 
+            <xsd:annotation> 
+              <xsd:documentation>Direccion del cliente que envia el mensaje. Puede ser una ip en el caso de un browser, un imei en caso de un telefono, etc</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="sourceTime" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Hora del sistema</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="locale" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"> 
+            <xsd:annotation> 
+              <xsd:documentation>Locale (formato lenguaje_pais) del cliente que realiza la operacion</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="institutionId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>URI de la Institucion cuando se usa institutionId</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="organizationId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>URI de la Organizacion cuando se usa organizationOpertorId</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="organizationOperatorId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>URI del operador empresa</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="executingOperatorId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>URI del operador que ejecuta la operacion</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="branchId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Sucursal</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="terminalId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Terminal</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="featureId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Funcionalidad ejecutada</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="paginationInfo" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Informacion relacionada a la paginacion</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="serviceImplementationVersion" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Versión de implementación del servicio, retornada por CMM</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="serviceExpirationDate" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Fecha de expiración del servicio, en caso que el mismo esté deprecado</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="channelDispatchDate" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Fecha del módulo o aplicación desde donde se origina la petición</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="cmmDispatchDate" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:annotation> 
+              <xsd:documentation>Fecha del módulo que recibe la petición y ejecuta la transacción, es decir, fecha de CMM</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="internals" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:complexType> 
+              <xsd:sequence> 
+                <xsd:any minOccurs="0" maxOccurs="1" namespace="##any" processContents="skip"/> 
+              </xsd:sequence> 
+            </xsd:complexType> 
+          </xsd:element>  
+          <xsd:element name="customProperties" minOccurs="0" maxOccurs="1" nillable="true"> 
+            <xsd:complexType> 
+              <xsd:sequence> 
+                <xsd:any minOccurs="0" maxOccurs="1" namespace="##any" processContents="skip"/> 
+              </xsd:sequence> 
+            </xsd:complexType> 
+          </xsd:element>  
+          <!--agregados Cyberbank Core -->  
+          <xsd:element name="localCountryId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="bankId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="businessDate" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="sourceDate" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="msgTypeId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="workflowModule" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="workflowId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="localCurrencyId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="parityCurrencyId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="originBranchId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="dependencyId" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>  
+          <xsd:element name="parityQuotationNemonic" type="bons1:abstractEnumComplexType" minOccurs="0" maxOccurs="1" nillable="true"/> 
+        </xsd:all> 
+      </xsd:complexType>
+      <xsd:element name="metadata" type="bons1:metadata"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.technisys.net/cmm/services/errors/v1.0" id="error">
+      <xsd:complexType name="errors"> 
+        <xsd:annotation> 
+          <xsd:documentation>Lista de errores devuelta por una invocacion</xsd:documentation> 
+        </xsd:annotation>  
+        <xsd:sequence> 
+          <xsd:element name="error" type="e:error" maxOccurs="unbounded"/> 
+        </xsd:sequence> 
+      </xsd:complexType>
+      <xsd:complexType name="error"> 
+        <xsd:annotation> 
+          <xsd:documentation>Representa a un error</xsd:documentation> 
+        </xsd:annotation>  
+        <xsd:sequence> 
+          <xsd:element name="cmmCode" type="xsd:string"> 
+            <xsd:annotation> 
+              <xsd:documentation>Codigo de error CMM</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="cmmMsg" type="xsd:string"> 
+            <xsd:annotation> 
+              <xsd:documentation>Descripcion del codigo de error CMM</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="kind"> 
+            <xsd:annotation> 
+              <xsd:documentation>Tipo de error</xsd:documentation> 
+            </xsd:annotation>  
+            <xsd:simpleType> 
+              <xsd:restriction base="xsd:string"> 
+                <xsd:enumeration value="INVOCATION"/>  
+                <xsd:enumeration value="VALIDATION"/>  
+                <xsd:enumeration value="BUSINESS"/>  
+                <xsd:enumeration value="GENERIC"/> 
+              </xsd:restriction> 
+            </xsd:simpleType> 
+          </xsd:element>  
+          <xsd:element name="severity"> 
+            <xsd:annotation> 
+              <xsd:documentation>Severidad del error</xsd:documentation> 
+            </xsd:annotation>  
+            <xsd:simpleType> 
+              <xsd:restriction base="xsd:string"> 
+                <xsd:enumeration value="WARN"/>  
+                <xsd:enumeration value="ERROR"/>  
+                <xsd:enumeration value="FATAL"/> 
+              </xsd:restriction> 
+            </xsd:simpleType> 
+          </xsd:element>  
+          <xsd:element name="link" type="xsd:string"> 
+            <xsd:annotation> 
+              <xsd:documentation>Link a entidad del mensaje ligada con el error</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="source" type="xsd:string"> 
+            <xsd:annotation> 
+              <xsd:documentation>Quien origino el error: CMM, Visa, Mastercard, CICS, SFB, etc</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="sourceCode" type="xsd:string"> 
+            <xsd:annotation> 
+              <xsd:documentation>Codigo original del core que devolvio el error</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element>  
+          <xsd:element name="detail" type="xsd:anyType"> 
+            <xsd:annotation> 
+              <xsd:documentation>Detalle del error</xsd:documentation> 
+            </xsd:annotation> 
+          </xsd:element> 
+        </xsd:sequence> 
+      </xsd:complexType>
+      <xsd:element name="errors" maxOccurs="1" minOccurs="1"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="verifyTokenValuePersonalBankingRequestMsg">
+    <wsdl:part name="verifyTokenValuePersonalBankingParameters" element="bons2:verifyTokenValuePersonalBankingRequest"/>
+    <wsdl:part name="metadata" element="bons1:metadata"/>
+  </wsdl:message>
+  <wsdl:message name="verifyTokenValuePersonalBankingResponseMsg">
+    <wsdl:part name="verifyTokenValuePersonalBankingResult" element="bons3:verifyTokenValuePersonalBankingResponse"/>
+    <wsdl:part name="metadata" element="bons1:metadata"/>
+  </wsdl:message>
+  <wsdl:message name="cyberbankException">
+    <wsdl:part name="cyberbankFault" element="e:errors"/>
+  </wsdl:message>
+  <wsdl:portType name="verifyTokenValuePersonalBanking">
+    <wsdl:operation name="verifyTokenValuePersonalBanking">
+      <wsdl:input name="verifyTokenValuePersonalBankingRequest" message="bons0:verifyTokenValuePersonalBankingRequestMsg"/>
+      <wsdl:output name="verifyTokenValuePersonalBankingResponse" message="bons0:verifyTokenValuePersonalBankingResponseMsg"/>
+      <wsdl:fault name="cyberbankFault" message="bons0:cyberbankException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Export1_verifyTokenValuePersonalBankingHttpBinding" type="bons0:verifyTokenValuePersonalBanking">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="verifyTokenValuePersonalBanking">
+      <soap12:operation/>
+      <wsdl:input name="verifyTokenValuePersonalBankingRequest">
+        <soap12:body parts="verifyTokenValuePersonalBankingParameters" use="literal"/>
+        <soap12:header message="bons0:verifyTokenValuePersonalBankingRequestMsg" part="metadata" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="verifyTokenValuePersonalBankingResponse">
+        <soap12:body parts="verifyTokenValuePersonalBankingResult" use="literal"/>
+        <soap12:header message="bons0:verifyTokenValuePersonalBankingResponseMsg" part="metadata" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="cyberbankFault">
+        <soap12:fault name="cyberbankFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMM_SERVICES">
+    <wsdl:port name="CMM_SERVICES" binding="bons0:Export1_verifyTokenValuePersonalBankingHttpBinding">
+      <soap12:address location="http://172.16.74.52:7080/CMM_SERVICES"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
