@@ -1,0 +1,150 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v2="http://www.technisys.net/cmm/services/metadata/v2.0" xmlns:v0="http://www.technisys.net/cmm/services/processPaymentMethodIntentionsPlay/rs/v0.0">
+    <soap:Header>
+        <v2:metadata>
+            <!--You may enter the following 39 items in any order-->
+            <serviceId>?</serviceId>
+            <serviceVersion>?</serviceVersion>
+            <sessionId>?</sessionId>
+            <!--Optional:-->
+            <institutionType>?</institutionType>
+            <!--Optional:-->
+            <organizationType>
+                <!--You may enter the following 5 items in any order-->
+                <mnemonic>?</mnemonic>
+                <!--Optional:-->
+                <longDesc>?</longDesc>
+                <!--Optional:-->
+                <shortDesc>?</shortDesc>
+                <!--Optional:-->
+                <originalCodes>?</originalCodes>
+                <!--Optional:-->
+                <internalValues>?</internalValues>
+            </organizationType>
+            <!--Optional:-->
+            <channelId>?</channelId>
+            <!--Optional:-->
+            <targetChannel>
+                <!--You may enter the following 5 items in any order-->
+                <mnemonic>?</mnemonic>
+                <!--Optional:-->
+                <longDesc>?</longDesc>
+                <!--Optional:-->
+                <shortDesc>?</shortDesc>
+                <!--Optional:-->
+                <originalCodes>?</originalCodes>
+                <!--Optional:-->
+                <internalValues>?</internalValues>
+            </targetChannel>
+            <!--Optional:-->
+            <executingChannel>
+                <!--You may enter the following 5 items in any order-->
+                <mnemonic>?</mnemonic>
+                <!--Optional:-->
+                <longDesc>?</longDesc>
+                <!--Optional:-->
+                <shortDesc>?</shortDesc>
+                <!--Optional:-->
+                <originalCodes>?</originalCodes>
+                <!--Optional:-->
+                <internalValues>?</internalValues>
+            </executingChannel>
+            <!--Optional:-->
+            <userId>?</userId>
+            <traceNumber>?</traceNumber>
+            <address>?</address>
+            <!--Optional:-->
+            <sourceTime>?</sourceTime>
+            <locale>?</locale>
+            <!--Optional:-->
+            <institutionId>?</institutionId>
+            <!--Optional:-->
+            <organizationId>?</organizationId>
+            <!--Optional:-->
+            <organizationOperatorId>?</organizationOperatorId>
+            <!--Optional:-->
+            <executingOperatorId>?</executingOperatorId>
+            <!--Optional:-->
+            <branchId>?</branchId>
+            <!--Optional:-->
+            <terminalId>?</terminalId>
+            <!--Optional:-->
+            <featureId>?</featureId>
+            <!--Optional:-->
+            <paginationInfo>?</paginationInfo>
+            <!--Optional:-->
+            <serviceImplementationVersion>?</serviceImplementationVersion>
+            <!--Optional:-->
+            <serviceExpirationDate>?</serviceExpirationDate>
+            <!--Optional:-->
+            <channelDispatchDate>?</channelDispatchDate>
+            <!--Optional:-->
+            <cmmDispatchDate>?</cmmDispatchDate>
+            <!--Optional:-->
+            <internals>
+                <!--You may enter ANY elements at this point-->
+            </internals>
+            <!--Optional:-->
+            <customProperties>
+                <!--You may enter ANY elements at this point-->
+            </customProperties>
+            <!--Optional:-->
+            <localCountryId>?</localCountryId>
+            <!--Optional:-->
+            <bankId>?</bankId>
+            <!--Optional:-->
+            <businessDate>?</businessDate>
+            <!--Optional:-->
+            <sourceDate>?</sourceDate>
+            <!--Optional:-->
+            <msgTypeId>?</msgTypeId>
+            <!--Optional:-->
+            <workflowModule>?</workflowModule>
+            <!--Optional:-->
+            <workflowId>?</workflowId>
+            <!--Optional:-->
+            <localCurrencyId>?</localCurrencyId>
+            <!--Optional:-->
+            <parityCurrencyId>?</parityCurrencyId>
+            <!--Optional:-->
+            <originBranchId>?</originBranchId>
+            <!--Optional:-->
+            <dependencyId>?</dependencyId>
+            <!--Optional:-->
+            <parityQuotationNemonic>
+                <!--You may enter the following 5 items in any order-->
+                <mnemonic>?</mnemonic>
+                <!--Optional:-->
+                <longDesc>?</longDesc>
+                <!--Optional:-->
+                <shortDesc>?</shortDesc>
+                <!--Optional:-->
+                <originalCodes>?</originalCodes>
+                <!--Optional:-->
+                <internalValues>?</internalValues>
+            </parityQuotationNemonic>
+        </v2:metadata>
+    </soap:Header>
+    <soap:Body>
+        <v0:processPaymentMethodIntentionsPlayResponse>
+            <!--Optional:-->
+            <generic>
+                <!--You may enter the following 4 items in any order-->
+                <!--Optional:-->
+                <idIntention type="?">?</idIntention>
+                <!--Optional:-->
+                <acquirer type="?">?</acquirer>
+                <!--Optional:-->
+                <totalAmount type="?">?</totalAmount>
+                <!--Optional:-->
+                <due type="?">?</due>
+            </generic>
+            <paymentMethod name="?">
+                <!--You may enter the following 2 items in any order-->
+                <!--Optional:-->
+                <sPaymentMethodId>?</sPaymentMethodId>
+                <!--Optional:-->
+                <cardId>?</cardId>
+            </paymentMethod>
+        </v0:processPaymentMethodIntentionsPlayResponse>
+    </soap:Body>
+</soap:Envelope>

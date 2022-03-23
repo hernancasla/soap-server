@@ -357,5 +357,8 @@
     <wsdl:port name="CMM_SERVICES" binding="bons0:Export1_verifyTokenValuePersonalBankingHttpBinding">
       <soap12:address location="http://172.16.74.52:7080/CMM_SERVICES"/>
     </wsdl:port>
+    <wsdl:port name="CMM_SERVICES" binding="bons0:Export1_processPaymentMethodIntentionsPlayHttpBinding">
+      <soap12:address location="http://127.0.0.1:15099/CMM_SERVICES"/>
+    </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
