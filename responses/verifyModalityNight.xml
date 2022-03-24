@@ -1,0 +1,55 @@
+<NS1:Envelope
+        xmlns:NS1="http://www.w3.org/2003/05/soap-envelope">
+    <NS1:Header>
+        <NS2:metadata
+                xmlns:NS2="http://www.technisys.net/cmm/services/metadata/v2.0">
+            <sourceTime>20220323140705141-030000000</sourceTime>
+            <institutionId>uriSFB=2###20312859549;</institutionId>
+            <userId>uriSFB=##20312859549####20312859549;userName=20312859549;</userId>
+            <channelId>MB</channelId>
+            <institutionType></institutionType>
+            <terminalId></terminalId>
+            <channelDispatchDate>20220323140705141-030000000</channelDispatchDate>
+            <organizationOperatorId></organizationOperatorId>
+            <featureId></featureId>
+            <serviceId>verifyModalityNight</serviceId>
+            <serviceVersion>0.0</serviceVersion>
+            <sessionId>60600725ACC40F80D2C821B2BE112F85</sessionId>
+            <targetChannel>
+                <mnemonic>MB</mnemonic>
+            </targetChannel>
+            <organizationType>
+                <mnemonic></mnemonic>
+            </organizationType>
+            <executingChannel>
+                <mnemonic>MB</mnemonic>
+            </executingChannel>
+            <executingOperatorId>uriSFB=##20312859549####20312859549;userName=20312859549;</executingOperatorId>
+            <organizationId>uriSFB=2###20312859549;</organizationId>
+            <traceNumber>12137332</traceNumber>
+            <address>ip=00000000000000000a57a967e4b8debd;</address>
+            <locale>es_AR</locale>
+            <customProperties>
+                <brokerName type="java.lang.String">BRK8PATAT01</brokerName>
+                <hostName type="java.lang.String">sraptl001v038</hostName>
+                <serviceChannel type="java.lang.String">verifyModalityNight</serviceChannel>
+            </customProperties>
+            <internals>
+                <organizationType>
+                    <mnemonic></mnemonic>
+                </organizationType>
+                <executingChannel>
+                    <mnemonic>MB</mnemonic>
+                </executingChannel>
+            </internals>
+        </NS2:metadata>
+    </NS1:Header>
+    <NS1:Body>
+        <srv:verifyModalityNightResponse
+                xmlns:srv="http://www.technisys.net/cmm/services/verifyModalityNight/rs/v0.0">
+            <generic>
+                <modalityNight type="java.lang.Boolean">false</modalityNight>
+            </generic>
+        </srv:verifyModalityNightResponse>
+    </NS1:Body>
+</NS1:Envelope>

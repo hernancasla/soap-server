@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NS1:Envelope xmlns:NS1="http://www.w3.org/2003/05/soap-envelope">
+    <NS1:Header>
+        <NS2:metadata xmlns:NS2="http://www.technisys.net/cmm/services/metadata/v2.0">
+            <sourceTime>20220303154603753-030000000</sourceTime>
+            <institutionId>uriSFB=2#80#12#20312859549;</institutionId>
+            <userId>uriSFB=80#12#20312859549##80#12#20312859549;userName=20312859549;</userId>
+            <channelId>MB</channelId>
+            <institutionType/>
+            <terminalId/>
+            <channelDispatchDate>20220303154603753-030000000</channelDispatchDate>
+            <organizationOperatorId/>
+            <featureId/>
+            <serviceId>massiveSelectCardListInPlay</serviceId>
+            <serviceVersion>0.0</serviceVersion>
+            <sessionId>83FFFFF4DEF1050460ECDB122F512C8F.mobile1</sessionId>
+            <targetChannel>
+                <mnemonic>MB</mnemonic>
+            </targetChannel>
+            <organizationType>
+                <mnemonic/>
+            </organizationType>
+            <executingChannel>
+                <mnemonic>MB</mnemonic>
+            </executingChannel>
+            <executingOperatorId>uriSFB=80#12#20312859549##80#12#20312859549;userName=20312859549;</executingOperatorId>
+            <organizationId>uriSFB=2#80#12#20312859549;</organizationId>
+            <traceNumber>11980960</traceNumber>
+            <address>ip=0000000000000000a963287e5446355c;</address>
+            <locale>es_AR</locale>
+            <customProperties>
+                <brokerName type="java.lang.String">BRK8PATAT01</brokerName>
+                <hostName type="java.lang.String">sraptl001v038</hostName>
+                <serviceChannel type="java.lang.String">massiveSelectCardListInPlay</serviceChannel>
+            </customProperties>
+            <internals>
+                <organizationType>
+                    <mnemonic/>
+                </organizationType>
+                <executingChannel>
+                    <mnemonic>MB</mnemonic>
+                </executingChannel>
+            </internals>
+        </NS2:metadata>
+    </NS1:Header>
+    <NS1:Body>
+        <srv:massiveSelectCardListInPlayResponse xmlns:srv="http://www.technisys.net/cmm/services/massiveSelectCardListInPlay/rs/v0.0">
+            <collection name="cards">
+                <card>
+                    <brand>
+                        <mnemonic>platinum</mnemonic>
+                    </brand>
+                    <cardId>1af5bb7e-60f7-469f-be7d-5d47eda7ce0f</cardId>
+                    <forthLineText>0642</forthLineText>
+                    <nameOnCard>CREDIT</nameOnCard>
+                    <product>
+                        <institution>
+                            <bank>
+                                <internalValues>Patagonia</internalValues>
+                            </bank>
+                        </institution>
+                        <isOptional>false</isOptional>
+                        <productType>
+                            <sProductTypeId>visa</sProductTypeId>
+                        </productType>
+                        <stampAdditional>469701</stampAdditional>
+                    </product>
+                    <numberOnCard>4697010001280642</numberOnCard>
+                    <lastDueDate>2020/10/05 000000</lastDueDate>
+                </card>
+                <card>
+                    <brand>
+                        <mnemonic>platinum</mnemonic>
+                    </brand>
+                    <cardId>d43de97f-3416-4aef-a495-769d2558d461</cardId>
+                    <forthLineText>4589</forthLineText>
+                    <nameOnCard>CREDIT</nameOnCard>
+                    <product>
+                        <institution>
+                            <bank>
+                                <internalValues>Patagonia</internalValues>
+                            </bank>
+                        </institution>
+                        <isOptional>false</isOptional>
+                        <productType>
+                            <sProductTypeId>master</sProductTypeId>
+                        </productType>
+                        <stampAdditional>521388</stampAdditional>
+                    </product>
+                    <numberOnCard>5213880010064589</numberOnCard>
+                    <lastDueDate>2020/10/05 000000</lastDueDate>
+                </card>
+                <card>
+                    <cardId>09c5caa3-f07f-4e1c-a609-a0f120e2e0c7</cardId>
+                    <forthLineText>4077</forthLineText>
+                    <nameOnCard>DEBIT</nameOnCard>
+                    <product>
+                        <institution>
+                            <bank>
+                                <internalValues>Patagonia</internalValues>
+                            </bank>
+                        </institution>
+                        <isOptional>false</isOptional>
+                        <productType>
+                            <sProductTypeId>visa</sProductTypeId>
+                        </productType>
+                        <stampAdditional>457596</stampAdditional>
+                    </product>
+                    <numberOnCard>4575960056474077</numberOnCard>
+                </card>
+            </collection>
+        </srv:massiveSelectCardListInPlayResponse>
+    </NS1:Body>
+</NS1:Envelope>

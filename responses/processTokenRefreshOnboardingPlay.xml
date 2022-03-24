@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NS1:Envelope
+        xmlns:NS1="http://www.w3.org/2003/05/soap-envelope">
+    <NS1:Header>
+        <NS2:metadata
+                xmlns:NS2="http://www.technisys.net/cmm/services/metadata/v2.0">
+            <sourceTime>20220303154602484-030000000</sourceTime>
+            <institutionId>uriSFB=2#80#12#20312859549;</institutionId>
+            <userId>uriSFB=80#12#20312859549##80#12#20312859549;userName=20312859549;</userId>
+            <channelId>MB</channelId>
+            <institutionType/>
+            <terminalId/>
+            <channelDispatchDate>20220303154602484-030000000</channelDispatchDate>
+            <organizationOperatorId/>
+            <featureId/>
+            <serviceId>processTokenRefreshOnboardingPlay</serviceId>
+            <serviceVersion>0.0</serviceVersion>
+            <sessionId>83FFFFF4DEF1050460ECDB122F512C8F.mobile1</sessionId>
+            <targetChannel>
+                <mnemonic>MB</mnemonic>
+                <originalCodes>originalCode=MB;</originalCodes>
+                <shortDesc>Mobile Banking</shortDesc>
+            </targetChannel>
+            <organizationType>
+                <mnemonic/>
+            </organizationType>
+            <executingChannel>
+                <mnemonic>MB</mnemonic>
+            </executingChannel>
+            <executingOperatorId>uriSFB=80#12#20312859549##80#12#20312859549;userName=20312859549;</executingOperatorId>
+            <organizationId>uriSFB=2#80#12#20312859549;</organizationId>
+            <traceNumber>11980957</traceNumber>
+            <address>ip=0000000000000000a963287e5446355c;</address>
+            <locale>es_AR</locale>
+            <customProperties>
+                <brokerName type="java.lang.String">BRK8PATAT01</brokerName>
+                <hostName type="java.lang.String">sraptl001v038</hostName>
+                <serviceChannel type="java.lang.String">processTokenRefreshOnboardingPlay</serviceChannel>
+            </customProperties>
+            <internals>
+                <organizationType>
+                    <mnemonic/>
+                </organizationType>
+                <executingChannel>
+                    <mnemonic>MB</mnemonic>
+                </executingChannel>
+            </internals>
+        </NS2:metadata>
+    </NS1:Header>
+    <NS1:Body>
+        <srv:processTokenRefreshOnboardingPlayResponse
+                xmlns:srv="http://www.technisys.net/cmm/services/processTokenRefreshOnboardingPlay/rs/v0.0">
+            <generic>
+                <accessTokenExpires type="java.lang.Integer">180</accessTokenExpires>
+            </generic>
+            <token name="acessToken">
+                <value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJiYW5rSWQiOiI0Njc1MDRmNi1jYWFmLTRlYWQtYjY1Yi0xZTY2OTVhZTYyMDIiLCJ0b2tlblR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJyZWZyZXNoand0aWQiOiJlYTk3NjM1Mi01N2U1LTRkMzctODcyYy1mZmU1ZWZmODIyYWUiLCJqd3RpZCI6IjJlODk4YTRlLWE4NDItNDVhMS1iYTIyLWMxZTQ2ZTVjMjgzYSIsImlhdCI6MTY0NjMzMzE2MywiZXhwIjoxNjQ2MzMzMzQzLCJzdWIiOiJhODdkODVmNC03NWZkLTQ3ODMtYWNlYy03OWU0N2FhOTgwYzcifQ.wgTaNrUCDOSqHbF9UWZh3HxeQRmFzoVRX8EIJEcU5Rw</value>
+                <tokenType>
+                    <mnemonic>Bearer</mnemonic>
+                    <originalCodes>originalCode=Bearer;</originalCodes>
+                    <shortDesc>Bearer</shortDesc>
+                </tokenType>
+            </token>
+        </srv:processTokenRefreshOnboardingPlayResponse>
+    </NS1:Body>
+</NS1:Envelope>

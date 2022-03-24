@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NS1:Envelope xmlns:NS1="http://www.w3.org/2003/05/soap-envelope">
+    <NS1:Header>
+        <NS2:metadata xmlns:NS2="http://www.technisys.net/cmm/services/metadata/v2.0">
+            <sourceTime>20220303161720216-030000000</sourceTime>
+            <institutionId>uriSFB=2#80#12#20312859549;</institutionId>
+            <userId>uriSFB=80#12#20312859549##80#12#20312859549;userName=20312859549;</userId>
+            <channelId>MB</channelId>
+            <institutionType/>
+            <terminalId/>
+            <channelDispatchDate>20220303161720216-030000000</channelDispatchDate>
+            <organizationOperatorId/>
+            <featureId/>
+            <serviceId>processPaymentMethodReadingPlay</serviceId>
+            <serviceVersion>0.0</serviceVersion>
+            <sessionId>F8C7A7E0DB4E1BF985E9FA2865F1EE0B.mobile1</sessionId>
+            <targetChannel>
+                <mnemonic>MB</mnemonic>
+            </targetChannel>
+            <organizationType>
+                <mnemonic/>
+            </organizationType>
+            <executingChannel>
+                <mnemonic>MB</mnemonic>
+            </executingChannel>
+            <executingOperatorId>uriSFB=80#12#20312859549##80#12#20312859549;userName=20312859549;</executingOperatorId>
+            <organizationId>uriSFB=2#80#12#20312859549;</organizationId>
+            <traceNumber>11981923</traceNumber>
+            <address>ip=0000000000000000a963287e5446355c;</address>
+            <locale>es_AR</locale>
+            <customProperties>
+                <brokerName type="java.lang.String">BRK8PATAT01</brokerName>
+                <hostName type="java.lang.String">sraptl001v038</hostName>
+                <serviceChannel type="java.lang.String">processPaymentMethodReadingPlay</serviceChannel>
+            </customProperties>
+            <internals>
+                <organizationType>
+                    <mnemonic/>
+                </organizationType>
+                <executingChannel>
+                    <mnemonic>MB</mnemonic>
+                </executingChannel>
+            </internals>
+        </NS2:metadata>
+    </NS1:Header>
+    <NS1:Body>
+        <srv:processPaymentMethodReadingPlayResponse xmlns:srv="http://www.technisys.net/cmm/services/processPaymentMethodReadingPlay/rs/v0.0">
+            <generic>
+                <exceedUserAvailableLimit type="java.lang.Boolean">false</exceedUserAvailableLimit>
+                <installmentsFinancingEnable type="java.lang.Boolean">false</installmentsFinancingEnable>
+                <totalAmount type="java.lang.Double">120</totalAmount>
+                <userAvailableLimit type="java.lang.Double">49820</userAvailableLimit>
+                <merchantName type="java.lang.String">CARREFOUR</merchantName>
+                <selectPaymentMethod type="java.lang.Boolean">true</selectPaymentMethod>
+            </generic>
+            <paymentMethod name="paymentMethodQr">
+                <stampUser>
+                    <customer>
+                        <name>CARREFOUR</name>
+                    </customer>
+                    <institution>
+                        <currency>
+                            <mnemonic>ARS</mnemonic>
+                            <longDesc>Peso Argentino</longDesc>
+                            <originalCodes>originalCode=ARS;</originalCodes>
+                            <shortDesc>$</shortDesc>
+                        </currency>
+                    </institution>
+                </stampUser>
+                <status>
+                    <sStatusId>CLOSED</sStatusId>
+                </status>
+            </paymentMethod>
+            <collection name="supportedPaymentMethods">
+                <paymentMethod>
+                    <officialId>b5414565-80d7-4940-ac3a-5fc49675640a</officialId>
+                    <sPaymentMethodId>CARD</sPaymentMethodId>
+                </paymentMethod>
+                <paymentMethod>
+                    <officialId>ed79e5ee-1f48-4df3-90d4-b0bb88930cad</officialId>
+                    <sPaymentMethodId>CARD</sPaymentMethodId>
+                </paymentMethod>
+                <paymentMethod>
+                    <officialId>8964f3d0-1faa-4e7d-845f-7a945718bf3b</officialId>
+                    <sPaymentMethodId>CARD</sPaymentMethodId>
+                </paymentMethod>
+                <paymentMethod>
+                    <officialId>1af5bb7e-60f7-469f-be7d-5d47eda7ce0f</officialId>
+                    <sPaymentMethodId>CARD</sPaymentMethodId>
+                </paymentMethod>
+                <paymentMethod>
+                    <officialId>d43de97f-3416-4aef-a495-769d2558d461</officialId>
+                    <sPaymentMethodId>CARD</sPaymentMethodId>
+                </paymentMethod>
+                <paymentMethod>
+                    <officialId>09c5caa3-f07f-4e1c-a609-a0f120e2e0c7</officialId>
+                    <sPaymentMethodId>CARD</sPaymentMethodId>
+                </paymentMethod>
+            </collection>
+            <collection name="supportedPaymentTypes">
+                <paymentType>
+                    <sPaymentTypeId>CARD</sPaymentTypeId>
+                </paymentType>
+            </collection>
+        </srv:processPaymentMethodReadingPlayResponse>
+    </NS1:Body>
+</NS1:Envelope>

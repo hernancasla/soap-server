@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NS1:Envelope xmlns:NS1="http://www.w3.org/2003/05/soap-envelope">
+    <NS1:Header>
+        <NS2:metadata xmlns:NS2="http://www.technisys.net/cmm/services/metadata/v2.0">
+            <sourceTime>20220304120026329-030000000</sourceTime>
+            <institutionId>uriSFB=2#80#12#20312859549;</institutionId>
+            <userId>uriSFB=80#12#20312859549##80#12#20312859549;userName=20312859549;</userId>
+            <channelId>MB</channelId>
+            <institutionType/>
+            <terminalId/>
+            <channelDispatchDate>20220304120026329-030000000</channelDispatchDate>
+            <organizationOperatorId/>
+            <featureId/>
+            <serviceId>processPaymentMethodIntentionsPlay</serviceId>
+            <serviceVersion>0.0</serviceVersion>
+            <sessionId>B02DFFC362BD9FAF78DEA40B7C835E05</sessionId>
+            <targetChannel>
+                <mnemonic>MB</mnemonic>
+                <originalCodes>originalCode=MB;</originalCodes>
+                <shortDesc>Mobile Banking</shortDesc>
+            </targetChannel>
+            <organizationType>
+                <mnemonic/>
+            </organizationType>
+            <executingChannel>
+                <mnemonic>MB</mnemonic>
+            </executingChannel>
+            <executingOperatorId>uriSFB=80#12#20312859549##80#12#20312859549;userName=20312859549;</executingOperatorId>
+            <organizationId>uriSFB=2#80#12#20312859549;</organizationId>
+            <traceNumber>11989924</traceNumber>
+            <address>ip=00000000000000000a57a967e4b8debd;</address>
+            <locale>es_AR</locale>
+            <customProperties>
+                <brokerName type="java.lang.String">BRK8PATAT01</brokerName>
+                <hostName type="java.lang.String">sraptl001v038</hostName>
+                <serviceChannel type="java.lang.String">processPaymentMethodIntentionsPlay</serviceChannel>
+            </customProperties>
+            <internals>
+                <organizationType>
+                    <mnemonic/>
+                </organizationType>
+                <executingChannel>
+                    <mnemonic>MB</mnemonic>
+                </executingChannel>
+            </internals>
+        </NS2:metadata>
+    </NS1:Header>
+    <NS1:Body>
+        <srv:processPaymentMethodIntentionsPlayResponse xmlns:srv="http://www.technisys.net/cmm/services/processPaymentMethodIntentionsPlay/rs/v0.0">
+            <generic name="generic">
+                <idIntention>221868</idIntention>
+                <acquirer>LARGE_BUSINESS</acquirer>
+                <totalAmount>120</totalAmount>
+                <due>human_interaction</due>
+            </generic>
+            <collection name="paymentMethod">
+                <sPaymentMethodId>CARD</sPaymentMethodId>
+                <cardId>1af5bb7e-60f7-469f-be7d-5d47eda7ce0f</cardId>
+            </collection>
+        </srv:processPaymentMethodIntentionsPlayResponse>
+    </NS1:Body>
+</NS1:Envelope>

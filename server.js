@@ -35,12 +35,15 @@ app.post('/', function(req, res, next) {
         return result[0]?result[0][key][0]:undefined;
     }
     let serviceId = searchServiceId('serviceid');
-    console.log(`results: ${serviceId}`)
+    console.log(`ServiceID: ${serviceId}`)
     if(responseFiles[serviceId]){
+
         fs.readFile(responseFiles[serviceId], 'utf8', function (err, data) {
+            console.log("Resultado exitoso");
             res.send(data);
         })
     } else {
+        console.log("Resultado con error")
         res.status(404).send('<error>error</error>');
     }
 });
